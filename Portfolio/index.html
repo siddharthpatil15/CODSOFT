@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="content"></div>
+    <script>
+        var loader;
+        function loadNow(opacity){
+            if(opacity <= 0){
+                displayContent();
+            }
+            else{
+                loader.style.opacity = opacity;
+                window.setTimeout(function(){
+                    loadNow(opacity - 0.075)
+                }, 100);
+            }
+        }
+        function displayContent(){
+            loader.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+        document.addEventListener("DOMContentLoaded", function(){
+            loader = document.getElementById('loader');
+            loadNow(3);
+        });
+    </script>
+    <div id="main">
+        <div id="page">
+            <h1 id="date-time" class="centered">11:58</h1>
+            <!-- Gets current time -->
+            <script>
+                setInterval(setTime, 1000);
+                setTime();
+                function setTime(){
+                    var dt = new Date();
+                    time = dt.toLocaleTimeString([],{hour: '2-digit', minute: '2-digit',});
+                    document.getElementById('date-time').innerHTML = time;
+                }
+            </script>
+            <div id="nav">
+                <img src="signature.png" alt="">
+                <div id="center-nav">
+                    <a href="#">SKILLS</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">PROJECTS</a>
+                    <a href="#">PORTFOLIO</a>
+                    <a href="#">CONTACT</a>
+                </div>
+                <input type="text" placeholder="search">
+            </div>
+            <img src="sidPHOTOmain_3.png" alt="">
+            <div id="text">
+                <h5>Hello!</h5>
+                <h1>👋 Welcome <br>to my Portfolio!</h1>
+                <h4>I'm Siddharth Patil, a passionate front-end developer🚀 with expertise in HTML, CSS, and JavaScript. With a keen eye for design and a knack for crafting engaging user experiences, I transform ideas into captivating websites <br>My journey in the world of coding has also equipped me with a solid understanding of data structures, enabling me to write code that's as efficient as it is elegant</h4>
+                <div id="buttons">
+                    <button id="b1">LET'S TALK<i class="ri-telegram-line"></i></button>
+                    <button id="b2">RESUME <i class="ri-arrow-right-up-line"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="page1">
+            <div id="right">
+                <div id="text1">
+                    <h5>Skills</h5>
+                    <h1>Skills <br>& Achievements <i class="ri-trophy-line"></i></h1>
+                    <h4>As a student, I'm passionate about learning and expanding my knowledge. Also, with that I've participated in many inter-college tournaments and workshops.</h4>
+                </div>
+            </div>
+            <div id="left">
+                <div class="box">
+                    <h4>01/</h4>
+                    <h1>INTER COLLEGE<br>FOOTBALL PARTICIPANT</h1>
+                    <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                </div>
+                <div class="box">
+                    <h4>02/</h4>
+                    <h1>INTER COLLEGE <br>PRATIKRUTI PARTICIPANT</h1>
+                    <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                </div>
+                <div class="box">
+                    <h4>03/</h4>
+                    <h1>GOOGLE CLOUD<br>ARCADE PARTICIPANT</h1>
+                    <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="page2">
+            <div id="text4">
+                <h5>PROJECT</h5>
+                <h1>LATEST <br>PROJECTS</h1>
+            </div>
+            <div id="project">
+                <div class="projects p1">
+                    <div id="text3">
+                        <h1>Nike website <br>Page Design</h1>
+                        <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                    </div>
+                    <div id="image">
+                        <img src="LandingPAGE.JPG" alt="">
+                    </div>
+                </div>
+                <div class="projects p2">
+                    <div id="text3">
+                        <h1>Headphones Store <br>Website Design</h1>
+                        <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                    </div>
+                    <div id="image">
+                        <img src="HeadphonesSTORE.JPG" alt="">
+                    </div>
+                </div>
+                <div class="projects p3">
+                    <div id="text3">
+                        <h1>Spotify clone <br>Page Design</h1>
+                        <div class="circle"><i class="ri-arrow-right-up-line"></i></div>
+                    </div>
+                    <div id="image">
+                        <img src="SpotifyCLONE.JPG" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="explore">
+                <button id="b">CLICK FOR MORE<i class="ri-telegram-line"></i></button>
+            </div>
+        </div>
+        <div id="contact">
+            <div id="content">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me for collaboration opportunities or any inquiries. Let's turn ideas into reality together!</p>
+            </div>
+            <div id="container">
+                <div id="contactinfo">
+                    <div id="box">
+                        <div id="icon"><i class='bx bx-map'></i></div>
+                        <div id="text5">
+                            <!-- <div id="icon"><i class='bx bx-map'></i></div> -->
+                            <h3>Address</h3>
+                            <p>123, Rainbow Avenue, Hillcrest Society, Koregaon Park, Pune, Maharashtra, India - 411***</p>
+                        </div>                        
+                    </div>
+                    <div id="box">
+                        <div id="icon"><i class='bx bx-phone'></i></div>
+                        <div id="text5">
+                            <h3>Phone</h3>
+                            <p>+91 345-876-****</p>
+                        </div>
+                    </div>
+                    <div id="box">
+                        <div id="icon"><i class='bx bx-envelope'></i></div>
+                        <div id="text5">
+                            <h3>Email</h3>
+                            <p>siddharth.patil@portfolio.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="contactForm">
+                    <form>
+                        <h2>Send Message</h2>
+                        <div id="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div id="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div id="inputBox">
+                            <textarea required="required"></textarea>
+                            <span>Type your Message...</span>
+                        </div>
+                        <div id="inputBox">
+                            <input type="submit" name="" value="Send">
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
